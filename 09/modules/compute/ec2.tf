@@ -5,6 +5,10 @@ data "aws_ami" "amazon_linux_2_ami" {
 }
 
 
+data "aws_iam_instance_profile" "ssm_instance_profile" {
+  name = "LabInstanceProfile"
+}
+
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.amazon_linux_2_ami.id
