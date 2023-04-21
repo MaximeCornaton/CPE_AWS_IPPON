@@ -1,3 +1,3 @@
 output "private_subnets_ids" {
-  value = var.private_subnets
+  value = module.vpc.private_subnets
 }

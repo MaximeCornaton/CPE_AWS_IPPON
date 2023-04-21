@@ -34,8 +34,7 @@ module "network" {
 module "compute" {
   source  = "./modules/compute"
   
-  private_subnets_ids = module.network.private_subnets_ids
-
+  private_subnets_ids= module.network.private_subnets_ids
 }
 
 
